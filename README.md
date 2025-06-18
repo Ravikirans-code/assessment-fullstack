@@ -21,12 +21,12 @@ If you have a ZIP file:
 
 If you're using Git:
 
-git clone https://github.com/Ravikirans-code/assessment-fullstack.git
+- git clone https://github.com/Ravikirans-code/assessment-fullstack.git
 
-cd assessment-fullstack
+- cd assessment-fullstack
 
-npm install
-npm run dev
+- npm install
+- npm run dev
 
-http://localhost:3000
+- http://localhost:3000
 
