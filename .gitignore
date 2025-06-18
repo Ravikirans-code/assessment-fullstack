@@ -1,0 +1,29 @@
+# Dependencies
+/node_modules
+
+# Builds
+/.next
+/out
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS/Editor junk
+.DS_Store
+*.swp
+*.swo
+*.log
+
+# Env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Tailwind CSS JIT cache
+.tailwind
