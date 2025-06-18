@@ -23,17 +23,23 @@ export default function Home() {
   }, [selectedEpisode]);
 
   return (
-    <div style={{ display: 'flex', height: '100vh', overflow: 'hidden' }}>
-      <div style={{ width: '250px', overflowY: 'auto', borderRight: '1px solid #ccc' }}>
+    <div className="flex flex-col h-screen">
+      <header className="bg-yellow-700 text-white text-center py-4 shadow-md">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide">
+          Rick and Morty Characters
+        </h1>
+      </header>
+      <div className="flex flex-col sm:flex-row h-screen overflow-hidden">
         <EpisodeList
           episodes={episodes}
           selectedId={selectedEpisode?.id ?? null}
           onSelect={setSelectedEpisode}
         />
+        <main className="flex-1 overflow-y-auto">
+          <CharacterGrid characters={characters} selectedEpisode={selectedEpisode} />
+        </main>
       </div>
-      <div style={{ flex: 1, overflowY: 'auto' }}>
-        <CharacterGrid characters={characters} />
-      </div>
+
     </div>
   );
 }

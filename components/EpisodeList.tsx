@@ -9,17 +9,17 @@ interface Props {
 
 const EpisodeList: React.FC<Props> = ({ episodes, selectedId, onSelect }) => {
   return (
-    <aside style={{ width: '250px', borderRight: '1px solid #ccc' }}>
-      <h2 style={{ padding: '1rem' }}>Episodes</h2>
-      <ul style={{ listStyle: 'none', padding: 0 }}>
-        {episodes.map(ep => (
+    <aside className="w-full sm:w-[250px] h-[40vh] sm:h-full overflow-y-auto border-b sm:border-b-0 sm:border-r border-gray-300 bg-gray-50">
+      <h2 className="text-base text-center sm:text-lg font-bold p-3 sm:p-4 border-b border-gray-300">
+        Episodes
+      </h2>
+      <ul className="divide-y divide-gray-200">
+        {episodes.map((ep) => (
           <li
             key={ep.id}
-            style={{
-              padding: '0.75rem 1rem',
-              cursor: 'pointer',
-              backgroundColor: ep.id === selectedId ? '#ddd' : 'transparent',
-            }}
+            className={`p-3 sm:p-4 cursor-pointer hover:bg-gray-200 transition ${
+              ep.id === selectedId ? 'bg-gray-300 font-semibold' : ''
+            }`}
             onClick={() => onSelect(ep.id === selectedId ? null : ep)}
           >
             {ep.name}
